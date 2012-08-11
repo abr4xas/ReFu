@@ -1,6 +1,6 @@
 === ReFU (Regulatory functions) ===
 Contributors: abr4xas, jaac
-Donate link: http://abr4xas.org
+Donate link: http://abr4xas.org/refu
 Tags: alternative functions.php file of wordpress themes
 Requires at least: 3.4
 Tested up to: 3.4.1
@@ -16,7 +16,7 @@ This an alternative functions.php file of wordpress themes.
 
 == Installation ==
 
-1. Upload `/ReFU/` to the `/wp-content/plugins/` directory
+1. Upload `refu.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
