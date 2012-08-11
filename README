@@ -38,3 +38,4 @@ This an alternative functions.php file of wordpress themes.
 * added Canonical_Permalinks
 * added support_Twitter_oEmbed
 * added Color according to different input state
+* Remove support to Github
