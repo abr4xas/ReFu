@@ -1,0 +1,40 @@
+=== Plugin Name ===
+Contributors: abr4xas, jaac
+Donate link: http://abr4xas.org
+Tags: alternative functions.php file of wordpress themes
+Requires at least: 3.4
+Tested up to: 3.4.1
+Stable tag: 2.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Alternative functions.php file of wordpress themes.
+
+== Description ==
+
+This an alternative functions.php file of wordpress themes.
+
+== Installation ==
+
+1. Upload `/ReFU/` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+
+== Changelog ==
+
+= 1.0 =
+* added support to jQuery Google API.
+* added Custom_Avatar
+* added Custom feed link
+* added Slideshare to oEmbed
+* added support to Github
+* added Custom_LoginLogo
+
+= 2.0 =
+* added Custom_URL_LoginLogo
+* added Custom_ALT_text_LoginLogo
+* added Custom_social_fields
+* added new uploads files types
+* added Custom_foter_text_admin_panel
+* added Canonical_Permalinks
+* added support_Twitter_oEmbed
+* added Color according to different input state
