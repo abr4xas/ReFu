@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Functions
-Description: Alternative <code>functions.php</code>  file of wordpress themes
-Version: 1.0
+Description: Alternative <code>functions.php</code>  file of wordpress themes.
+Version: 2.0
 Author: abr4xas
 Author URI: http://abr4xas.org/refu
 License: GPLv2 or later
@@ -32,7 +32,7 @@ add_filter( 'avatar_defaults', 'newgravatar' );
 
 function newgravatar ($avatar_defaults) {
 $myavatar = get_bloginfo('template_directory') . '/images/gravatar.gif';
-$avatar_defaults[$myavatar] = "abr4xas";
+$avatar_defaults[$myavatar] = "Name of new gravatar";
 return $avatar_defaults;
 }
 
@@ -40,7 +40,7 @@ return $avatar_defaults;
 // Custom feed link
 function custom_feed_link($output, $feed) {
 
-$feed_url = 'http://feeds.feedburner.com/ElBlogDeAbr4xasVol2';
+$feed_url = 'Put your feed url here';
 
 $feed_array = array('rss' => $feed_url, 'rss2' => $feed_url, 'atom' => $feed_url, 'rdf' => $feed_url, 'comments_rss2' => '');
 $feed_array[$feed] = $feed_url;
@@ -51,7 +51,7 @@ return $output;
 
 function other_feed_links($link) {
 
-$link = 'http://feeds.feedburner.com/ElBlogDeAbr4xasVol2';
+$link = 'Put your feed url here';
 return $link;
 
 }
@@ -67,20 +67,6 @@ function oembed_slideshare(){
 wp_oembed_add_provider( 'http://www.slideshare.net/*', 'http://api.embed.ly/v1/api/oembed');
 }
 add_action('init','oembed_slideshare');
-
-//Github
-wp_embed_register_handler( 'gist', '/https:\/\/gist\.github\.com\/(\d+)(\?file=.*)?/i', 'wp_embed_handler_gist' );
-
-function wp_embed_handler_gist( $matches, $attr, $url, $rawattr ) {
-
-	$embed = sprintf(
-			'&lt;script src=&quot;https://gist.github.com/%1$s.js%2$s&quot;&gt;&lt;/script&gt;',
-			esc_attr($matches[1]),
-			esc_attr($matches[2])
-			);
-
-	return apply_filters( 'embed_gist', $embed, $matches, $attr, $url, $rawattr );
-}
 
 // Custom_LoginLogo
 
@@ -100,14 +86,14 @@ function my_login_head() {
 // Custom_URL_LoginLogo
 add_action( 'login_headerurl', 'my_custom_login_url' );
 function my_custom_login_url() {
-return 'http://abr4xas.org';
+return 'put your URL here';
 }
 
 // Custom_ALT_text_LoginLogo
 add_action("login_headertitle","my_custom_login_title");
 function my_custom_login_title()
 {
-return 'Otro sitio creado por abr4xas.org';
+return 'Change this';
 }
 
 // Custom_social_fields
@@ -137,7 +123,7 @@ add_filter('user_contactmethods','add_redessociales_contactmethod',10,1);
  
 // Custom_foter_text_admin_panel
 function remove_footer_admin () {
-    echo "Este sitio está administrado por abr4xas de abr4xas.org";
+    echo "Change this";
 } 
 
 add_filter('admin_footer_text', 'remove_footer_admin'); 
