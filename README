@@ -19,15 +19,13 @@ This an alternative functions.php file of wordpress themes.
 1. Upload `refu.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
+
+== Note ==
+- To report bugs: https://github.com/abr4xas/ReFu/issues
 == Changelog ==
 
 = 1.0 =
-* added support to jQuery Google API.
-* added Custom_Avatar
-* added Custom feed link
-* added Slideshare to oEmbed
-* added support to Github
-* added Custom_LoginLogo
+- This is the inaugural release of ReFu.
 
 = 2.0 =
 * added Custom_URL_LoginLogo
@@ -38,4 +36,8 @@ This an alternative functions.php file of wordpress themes.
 * added Canonical_Permalinks
 * added support_Twitter_oEmbed
 * added Color according to different input state
-* Remove support to Github
+- Remove support to Github
+
+= 2.0.1 =
+* added Send the result when only one is in a search
+* added Remove the WordPress version of the RSS / Atom
