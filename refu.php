@@ -2,7 +2,7 @@
 /*
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes.
-Version: 2.0
+Version: 2.0.1
 Author: abr4xas
 Author URI: http://abr4xas.org/refu
 License: GPLv2 or later
@@ -157,3 +157,20 @@ function posts_status_color() {
 <?php
 }
 add_action('admin_footer','posts_status_color');
+
+//Send the result when only one is in a search
+function single_result() {
+  if(is_search()) {
+    global $wp_query;
+    if($wp_query->post_count == 1) {
+      wp_redirect(get_permalink($wp_query->posts['0']->ID ));
+    }
+  }
+}
+add_action('template_redirect', 'single_result');
+
+//Remove the WordPress version of the RSS / Atom:
+function remove_feed_generator() {
+  return '';
+}
+add_filter('the_generator', 'remove_feed_generator');
