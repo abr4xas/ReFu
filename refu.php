@@ -9,7 +9,7 @@ License: GPLv2 or later
 */
 
 
-//jQuery Google API
+//Making jQuery Google API
 function modify_jquery() {
 	if (!is_admin()) {
 		// comment out the next two lines to load the local copy of jQuery
@@ -68,8 +68,8 @@ wp_oembed_add_provider( 'http://www.slideshare.net/*', 'http://api.embed.ly/v1/a
 }
 add_action('init','oembed_slideshare');
 
-// Custom_LoginLogo
 
+// Custom_LoginLogo
 add_action("login_head", "my_login_head");
 function my_login_head() {
 	echo "
@@ -86,7 +86,7 @@ function my_login_head() {
 // Custom_URL_LoginLogo
 add_action( 'login_headerurl', 'my_custom_login_url' );
 function my_custom_login_url() {
-return 'put your URL here';
+return 'put your URL here';	
 }
 
 // Custom_ALT_text_LoginLogo
@@ -98,11 +98,11 @@ return 'Change this';
 
 // Custom_social_fields
 function add_redessociales_contactmethod( $contactmethods ) {
-  // add Twitter
+// add Twitter
   $contactmethods['twitter'] = 'Twitter';
-  // add Facebook
+// add Facebook
   $contactmethods['facebook'] = 'Facebook';
-  // remove Yahoo, IM, AIM y Jabber
+// remove Yahoo, IM, AIM y Jabber
   unset($contactmethods['yim']);
   unset($contactmethods['aim']);
   unset($contactmethods['jabber']);
@@ -128,7 +128,6 @@ function remove_footer_admin () {
 
 add_filter('admin_footer_text', 'remove_footer_admin'); 
 
-
 //Add_Canonical_Permalinks
 function set_canonical() {
   if ( is_single() ) {
@@ -145,7 +144,7 @@ function twitter_oembed($a) {
 	return $a;
 }
 
-// Color according to different input state
+// Color according to different post state
 function posts_status_color() {
 ?>
   <style>
@@ -158,4 +157,3 @@ function posts_status_color() {
 <?php
 }
 add_action('admin_footer','posts_status_color');
-
