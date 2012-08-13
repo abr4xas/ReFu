@@ -8,7 +8,6 @@ Author URI: http://abr4xas.org/refu
 License: GPLv2 or later
 */
 
-
 //Making jQuery Google API
 function modify_jquery() {
 	if (!is_admin()) {
@@ -20,7 +19,7 @@ function modify_jquery() {
 }
 add_action('init', 'modify_jquery');
 
-// Custom_Avatar
+// Custom_Avatar_and_Logo
 function custom_loginlogo() {
 echo '<style type="text/css">
 h1 a {background-image: url('.get_bloginfo('template_directory').'/images/login_logo.png) !important; }
@@ -35,7 +34,6 @@ $myavatar = get_bloginfo('template_directory') . '/images/gravatar.gif';
 $avatar_defaults[$myavatar] = "Name of new gravatar";
 return $avatar_defaults;
 }
-
 
 // Custom feed link
 function custom_feed_link($output, $feed) {
@@ -67,7 +65,6 @@ function oembed_slideshare(){
 wp_oembed_add_provider( 'http://www.slideshare.net/*', 'http://api.embed.ly/v1/api/oembed');
 }
 add_action('init','oembed_slideshare');
-
 
 // Custom_LoginLogo
 add_action("login_head", "my_login_head");
