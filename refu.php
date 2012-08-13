@@ -2,7 +2,7 @@
 /*
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes. | Archivo alternativo para <code>functions.php</code> que permite usar todas las funciones que posee el archivo de forma independiente de la plantilla que se este usando.
-Version: 2.0.1
+Version: 2.0.1 <code>Beta</code>
 Author: abr4xas
 Author URI: http://abr4xas.org/refu
 License: GPLv2 or later
