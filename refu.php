@@ -172,7 +172,7 @@ function remove_feed_generator() {
 }
 add_filter('the_generator', 'remove_feed_generator');
 // Paypal Donation Shortcode
-// Just add [donate]Make a donation[/donate] where you want to display donation link on post or widget
+// Just add [donate]Make a donation[/donate] or [donate] where you want to display donation link on post or widget
 function donate_shortcode( $atts, $content = null) {
 	global $post;extract(shortcode_atts(array(
 		'account' => 'your-paypal-email-address',
@@ -184,3 +184,10 @@ function donate_shortcode( $atts, $content = null) {
 }
 add_shortcode('donate', 'donate_shortcode');
 add_filter('widget_text', 'do_shortcode');
+// Disable self trackbacks
+function disable_self_ping( &$links ) {
+    foreach ( $links as $l => $link )
+        if ( 0 === strpos( $link, get_option( 'home' ) ) )
+            unset($links[$l]);
+}
+add_action( 'pre_ping', 'disable_self_ping' );
