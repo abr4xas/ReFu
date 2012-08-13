@@ -41,3 +41,4 @@ This an alternative functions.php file of wordpress themes.
 * added Send the result when only one is in a search
 * added Remove the WordPress version of the RSS / Atom
 * added Paypal support
+* added Disable self trackbacks
