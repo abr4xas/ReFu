@@ -19,7 +19,6 @@ This an alternative functions.php file of wordpress themes.
 1. Upload `refu.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-
 == Note ==
 - To report bugs: https://github.com/abr4xas/ReFu/issues
 == Changelog ==
@@ -41,3 +40,4 @@ This an alternative functions.php file of wordpress themes.
 = 2.0.1 =
 * added Send the result when only one is in a search
 * added Remove the WordPress version of the RSS / Atom
+* added Paypal support

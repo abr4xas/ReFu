@@ -171,3 +171,16 @@ function remove_feed_generator() {
   return '';
 }
 add_filter('the_generator', 'remove_feed_generator');
+// Paypal Donation Shortcode
+// Just add [donate]Make a donation[/donate] where you want to display donation link on post or widget
+function donate_shortcode( $atts, $content = null) {
+	global $post;extract(shortcode_atts(array(
+		'account' => 'your-paypal-email-address',
+		'for' => $post->post_title,
+		'onHover' => '',
+	), $atts));
+	if(empty($content)) $content='Make A Donation';
+		return '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business='.$account.'&item_name=Donation for '.$for.'" title="'.$onHover.'">'.$content.'</a>';
+}
+add_shortcode('donate', 'donate_shortcode');
+add_filter('widget_text', 'do_shortcode');
