@@ -46,3 +46,4 @@ This an alternative functions.php file of wordpress themes.
 * added Remove the WordPress version of the RSS / Atom
 * added Paypal support
 * added Disable self trackbacks
+* added .pdf support to the WordPress media manager
