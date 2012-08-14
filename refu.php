@@ -191,3 +191,9 @@ function disable_self_ping( &$links ) {
             unset($links[$l]);
 }
 add_action( 'pre_ping', 'disable_self_ping' );
+//add .pdf support to the WordPress media manager
+function modify_post_mime_types( $post_mime_types ) {
+	$post_mime_types['application/pdf'] = array( __( 'PDFs' ), __( 'Manage PDFs' ), _n_noop( 'PDF <span class="count">(%s)</span>', 'PDFs <span class="count">(%s)</span>' ) );
+	return $post_mime_types;
+}
+add_filter( 'post_mime_types', 'modify_post_mime_types' );
