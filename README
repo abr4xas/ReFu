@@ -38,12 +38,10 @@ This an alternative functions.php file of wordpress themes.
 * added support_Twitter_oEmbed
 * added Color according to different input state
 - Remove support to Github
+- added Paypal support
 
 - Development
 
 = 2.0.1 = 
-* added Send the result when only one is in a search
-* added Remove the WordPress version of the RSS / Atom
-* added Paypal support
 * added Disable self trackbacks
 * added .pdf support to the WordPress media manager
