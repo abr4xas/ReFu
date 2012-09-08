@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Functions
-Description: Alternative <code>functions.php</code>  file of wordpress themes. | Archivo alternativo para <code>functions.php</code> que permite usar todas las funciones que posee el archivo de forma independiente de la plantilla que se este usando.
+Description: Alternative <code>functions.php</code>  file of wordpress themes.
 Version: 2.0.1
 Author: abr4xas
-Author URI: http://abr4xas.org/refu
+Author URI: http://abr4xas.org/refu/
 License: GPLv2 or later
 */
 
@@ -159,6 +159,7 @@ function remove_feed_generator() {
   return '';
 }
 add_filter('the_generator', 'remove_feed_generator');
+
 // Paypal Donation Shortcode
 // Just add [donate]Make a donation[/donate] or [donate] where you want to display donation link on post or widget
 function donate_shortcode( $atts, $content = null) {
@@ -172,6 +173,7 @@ function donate_shortcode( $atts, $content = null) {
 }
 add_shortcode('donate', 'donate_shortcode');
 add_filter('widget_text', 'do_shortcode');
+
 // Disable self trackbacks
 function disable_self_ping( &$links ) {
     foreach ( $links as $l => $link )
@@ -179,6 +181,7 @@ function disable_self_ping( &$links ) {
             unset($links[$l]);
 }
 add_action( 'pre_ping', 'disable_self_ping' );
+
 
 //add .pdf support to the WordPress media manager
 function modify_post_mime_types( $post_mime_types ) {
