@@ -23,6 +23,12 @@ This an alternative functions.php file of wordpress themes.
 
 == Note ==
 - To report bugs: https://github.com/abr4xas/ReFu/issues
+
+=== NOTE ===
+Para poder usar este script se debe tener encuenta lo siguiente:
+* desactivar cualquier plug-in que haga lo que aqui se describe.
+Este es el unico punto necesario ya que, si existe un plug-in que haga lo que se describe puede causar algun error en el funcionamiento del sistema como tal.
+
 == Changelog ==
 
 = 1.0 =
@@ -38,10 +44,10 @@ This an alternative functions.php file of wordpress themes.
 * added support_Twitter_oEmbed
 * added Color according to different input state
 - Remove support to Github
-- added Paypal support
+* added Paypal support
+* added Disable self trackbacks
 
 - Development
-
+El codigo es funcional de igual forma en este punto. Defino este punto como "Development" ya que incluyo nuevas funcionalidades.
 = 2.0.1 = 
-* added Disable self trackbacks
 * added .pdf support to the WordPress media manager

@@ -72,7 +72,7 @@ function my_login_head() {
 // Custom_URL_LoginLogo
 add_action( 'login_headerurl', 'my_custom_login_url' );
 function my_custom_login_url() {
-return 'put your URL here';	
+return 'put your URL here';
 }
 
 // Custom_ALT_text_LoginLogo
@@ -105,14 +105,14 @@ add_filter('user_contactmethods','add_redessociales_contactmethod',10,1);
 	 ) ) ;
 
 	 return $mimes ;
- } 
- 
+ }
+
 // Custom_foter_text_admin_panel
 function remove_footer_admin () {
     echo "Change this";
-} 
+}
 
-add_filter('admin_footer_text', 'remove_footer_admin'); 
+add_filter('admin_footer_text', 'remove_footer_admin');
 
 //Add_Canonical_Permalinks
 function set_canonical() {
@@ -136,7 +136,6 @@ function posts_status_color() {
   <style>
   .status-draft { background: #FCE3F2 !important; }
   .status-pending { background: #87C5D6 !important; }
-  .status-publish { /* por defecto */ }
   .status-future { background: #C6EBF5 !important; }
   .status-private { background: #F2D46F; }
   </style>
@@ -181,3 +180,9 @@ function disable_self_ping( &$links ) {
 }
 add_action( 'pre_ping', 'disable_self_ping' );
 
+//add .pdf support to the WordPress media manager
+function modify_post_mime_types( $post_mime_types ) {
+        $post_mime_types['application/pdf'] = array( __( 'PDFs' ), __( 'Manage PDFs' ), _n_noop( 'PDF <span class="count">(%s)</span>', 'PDFs <span $
+        return $post_mime_types;
+}
+add_filter( 'post_mime_types', 'modify_post_mime_types' );
