@@ -2,6 +2,20 @@
 /*
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes.
+With this plug-in you have support to:
+Custom_URL_LoginLogo
+Custom_ALT_text_LoginLogo
+Custom_social_fields
+New uploads files types
+Custom_foter_text_admin_panel
+Canonical_Permalinks
+Support_Twitter_oEmbed
+Color according to different input state
+Paypal support
+Disable self trackbacks
+Pdf support to the WordPress media manager
+
+All this (and more)  without having to use other plug-in that lower performance of your wordpress blog
 Version: 2.0.1
 Author: abr4xas
 Author URI: http://abr4xas.org/refu/
