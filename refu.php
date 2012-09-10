@@ -3,17 +3,18 @@
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes.
 With this plug-in you have support to:
-Custom_URL_LoginLogo
-Custom_ALT_text_LoginLogo
-Custom_social_fields
-New uploads files types
-Custom_foter_text_admin_panel
-Canonical_Permalinks
-Support_Twitter_oEmbed
-Color according to different input state
-Paypal support
-Disable self trackbacks
-Pdf support to the WordPress media manager
+
+* Custom_URL_LoginLogo
+* Custom_ALT_text_LoginLogo
+* Custom_social_fields
+* New uploads files types
+* Custom_foter_text_admin_panel
+* Canonical_Permalinks
+* Support_Twitter_oEmbed
+* Color according to different input state
+* Paypal support
+* Disable self trackbacks
+* Pdf support to the WordPress media manager
 
 All this (and more)  without having to use other plug-in that lower performance of your wordpress blog
 Version: 2.0.1
@@ -195,11 +196,3 @@ function disable_self_ping( &$links ) {
             unset($links[$l]);
 }
 add_action( 'pre_ping', 'disable_self_ping' );
-
-
-//add .pdf support to the WordPress media manager
-function modify_post_mime_types( $post_mime_types ) {
-        $post_mime_types['application/pdf'] = array( __( 'PDFs' ), __( 'Manage PDFs' ), _n_noop( 'PDF <span class="count">(%s)</span>', 'PDFs <span $
-        return $post_mime_types;
-}
-add_filter( 'post_mime_types', 'modify_post_mime_types' );

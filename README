@@ -51,4 +51,4 @@ To report bugs: https://github.com/abr4xas/ReFu/issues
 = 2.0.1 = 
 * added .pdf support to the WordPress media manager
 - remove support tu jquery (WordPress includes its own version of jquery, which has been rigorously tested with WP and many of the most common plugins. In order to provide the best compatibility and experience for our users.)
-
+- Removed support to pdf.
