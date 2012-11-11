@@ -1,0 +1,29 @@
+Changelog
+
+1.0 
+- This is the inaugural release of ReFu.
+
+2.0
+* added Custom_URL_LoginLogo
+* added Custom_ALT_text_LoginLogo
+* added Custom_social_fields
+* added new uploads files types
+* added Custom_foter_text_admin_panel
+* added Canonical_Permalinks
+* added support_Twitter_oEmbed
+* added Color according to different input state
+- Remove support to Github
+* added Paypal support
+* added Disable self trackbacks
+
+2.0.1
++ added .pdf support to the WordPress media manager
+- remove support tu jquery (WordPress includes its own version of jquery, which has been rigorously tested with WP and many of 
+the most common plugins. In order to provide the best compatibility and experience for our users.)
+- Removed support to pdf.
+
+3.0
++ Admin panel.
++ Se agrega funcion para incluir a ReFu como un menu en el dashboard
+- Se elimina estilos de acuerdo a los diferentes estatus de los post
+- Se elimina soporte a paypal.
