@@ -13,13 +13,12 @@ ReFU (Regulatory functions)
 Alternative functions.php file of wordpress themes.
 
 Note
-====
-See download secction for stable release. https://github.com/abr4xas/ReFu/downloads
+----
+See [download](https://github.com/abr4xas/ReFu/downloads)  secction for stable release. 
 
 Description
-===========
-
-This an alternative functions.php file of wordpress themes.
+-----------
+This an alternative `functions.php` file of wordpress themes.
 
 Installation
 ------------
@@ -33,4 +32,5 @@ Frequently Asked Questions
 It has been tested and has not caused problems. To avoid any inconvenience disable any other plugin to do what is listed in the changelog as it can cause some kind of system error.
 
  * To find some bug where I can report it?
-To report bugs: https://github.com/abr4xas/ReFu/issues
+
+To report bugs: clic [here]( https://github.com/abr4xas/ReFu/issues).
