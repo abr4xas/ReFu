@@ -2,25 +2,6 @@
 /*
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes.
-With this plug-in you have support to:
-
-* Custom_URL_LoginLogo
-* Custom_ALT_text_LoginLogo
-* Custom_social_fields
-* New uploads files types
-* Custom_foter_text_admin_panel
-* Canonical_Permalinks
-* Support_Twitter_oEmbed
-* Color according to different input state
-* Paypal support
-* Disable self trackbacks
-* Pdf support to the WordPress media manager
-
-All this (and more)  without having to use other plug-in that lower performance of your wordpress blog
-Version: 2.0.1
-Author: abr4xas
-Author URI: http://abr4xas.org/refu/
-License: GPLv2 or later
 */
 
 // Custom_Avatar_and_Logo
@@ -35,7 +16,7 @@ add_filter( 'avatar_defaults', 'newgravatar' );
 
 function newgravatar ($avatar_defaults) {
 $myavatar = get_bloginfo('template_directory') . '/images/gravatar.gif';
-$avatar_defaults[$myavatar] = "Name of new gravatar";
+$avatar_defaults[$myavatar] = "MozillaVE";
 return $avatar_defaults;
 }
 
@@ -174,20 +155,6 @@ function remove_feed_generator() {
   return '';
 }
 add_filter('the_generator', 'remove_feed_generator');
-
-// Paypal Donation Shortcode
-// Just add [donate]Make a donation[/donate] or [donate] where you want to display donation link on post or widget
-function donate_shortcode( $atts, $content = null) {
-	global $post;extract(shortcode_atts(array(
-		'account' => 'your-paypal-email-address',
-		'for' => $post->post_title,
-		'onHover' => '',
-	), $atts));
-	if(empty($content)) $content='Make A Donation';
-		return '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business='.$account.'&item_name=Donation for '.$for.'" title="'.$onHover.'">'.$content.'</a>';
-}
-add_shortcode('donate', 'donate_shortcode');
-add_filter('widget_text', 'do_shortcode');
 
 // Disable self trackbacks
 function disable_self_ping( &$links ) {
