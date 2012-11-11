@@ -27,7 +27,7 @@ function refu()
 }
 
 loadData();
-unction cargaDatosIniciales()
+function loadData()
 {
 	global $wpdb;
     $table_name = $wpdb->prefix . "refu";
@@ -61,10 +61,10 @@ function refu_menu()
 	//////// DECLARACION DEL MENU ////////////
 
 	// titulo de la nueva sección:
-	$page_title = "Clientes";
+	$page_title = "ReFu";
 
 	// titulo en el menú
-	$menu_title = "Clientes";
+	$menu_title = $page_title;
 
 	// nivel necesario para poder ver el menú (admin:10, editores:8)
 	// + info en: http://codex.wordpress.org/User_Levels
@@ -82,10 +82,6 @@ function refu_menu()
 	$menu_icon_url = null;
 
 	add_menu_page($page_title, $menu_title, $access_level, $content_file, $content_function, $menu_icon_url);
-
-  // Declaramos también como primer submenú la misma página con los mismos datos
-	add_submenu_page($content_file,$page_title, $menu_title, $access_level, $content_file, 'clientesAC_panel');
-
 }
 
 function getReFu(){
