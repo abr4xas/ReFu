@@ -21,6 +21,10 @@ This an alternative functions.php file of wordpress themes.
 1. Upload `refu.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
+== Screenshots ==
+
+1. Refu
+
 == Frequently Asked Questions ==
 
 = It can cause some kind of problem in my blog? =
