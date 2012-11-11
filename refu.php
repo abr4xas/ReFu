@@ -2,7 +2,34 @@
 /*
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes.
+Contributors: abr4xas
+Donate link: http://abr4xas.org/refu
+Tags: functions
+Requires at least: 3.4
+Tested up to: 3.4.1
+Stable tag: 2.0.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+add_action('admin_menu', 'refu_menu');
+function refu_panel()
+{  		
+  include('settings.php');	
+}
+function refu_menu()
+{
+
+	$page_title = "ReFu";
+	$menu_title = $page_title;
+	$access_level = "8";
+	$content_file = '/settings.php';	
+	$content_function = null;
+	$menu_icon_url = null;
+	add_menu_page($page_title, $menu_title, $access_level, $content_file, $content_function, $menu_icon_url);
+	add_submenu_page($content_file,$page_title, $menu_title, $access_level, $content_file, 'refu_panel');
+
+}
 
 // Custom_Avatar_and_Logo
 function custom_loginlogo() {
@@ -125,17 +152,6 @@ function twitter_oembed($a) {
 	$a['#http(s)?://(www\.)?twitter.com/.+?/status(es)?/.*#i'] = array( 'http://api.twitter.com/1/statuses/oembed.{format}', true);
 	return $a;
 }
-
-// Color according to different post state
-function posts_status_color() {
-  <style>
-  .status-draft { background: #FCE3F2 !important; }
-  .status-pending { background: #87C5D6 !important; }
-  .status-future { background: #C6EBF5 !important; }
-  .status-private { background: #F2D46F; }
-  </style>
-}
-add_action('admin_footer','posts_status_color');
 
 //Send the result when only one is in a search
 function single_result() {
