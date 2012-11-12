@@ -1,1 +1,63 @@
 /* style.css */
+wrapper{
+	margin: 15px;
+        border-radius: 15px 15px 0 0;
+	border: 1px solid #A4BBCD;
+        overflow: hidden;
+	background: #eee;
+	min-width: 900px;
+}
+body {
+	padding:15px 0 0 0;
+	margin:0;
+	background-color:#6A5C3B;
+	font-family: 'Advent Pro', sans-serif;font-weight: 400;
+}
+
+a {
+	color:#0B610B;
+	text-decoration:none;
+
+	
+}
+
+a:hover {
+	color:#0B610B;
+	text-decoration:none;
+        border-bottom:2px solid #889800;
+	
+}
+
+h1 {
+	margin:0 0 20px 0;
+	font-size:180%;
+	color: #000;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        -webkit-text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        -moz-text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+h2 {
+	margin:0 0 12px 0;
+	font-size:150%;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        -webkit-text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        -moz-text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+h3 {
+	margin:0 0 10px 0;
+	font-size:120%;
+	font-weight:normal;
+}
+
+p {
+	margin:0 0 15px 0;
+	line-height:1.5em;
+	text-align:left;
+	font-size:110%;
+}
+
+a img {
+	border:0;
+}
