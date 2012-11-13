@@ -27,3 +27,4 @@ the most common plugins. In order to provide the best compatibility and experien
 + Se agrega funcion para incluir a ReFu como un menu en el dashboard
 - Se elimina estilos de acuerdo a los diferentes estatus de los post
 - Se elimina soporte a paypal.
++ Se agrega soporte para eliminar los auto-guardados.
