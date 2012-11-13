@@ -14,8 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 add_action('admin_menu', 'refu_menu');
 function refu_panel()
-{  		
-  include('settings.php');	
+{
+  include('settings.php');
 }
 function refu_menu()
 {
@@ -23,7 +23,7 @@ function refu_menu()
 	$page_title = "ReFu";
 	$menu_title = $page_title;
 	$access_level = "8";
-	$content_file = '/settings.php';	
+	$content_file = '/settings.php';
 	$content_function = null;
 	$menu_icon_url = null;
 	add_menu_page($page_title, $menu_title, $access_level, $content_file, $content_function, $menu_icon_url);
@@ -43,7 +43,7 @@ add_filter( 'avatar_defaults', 'newgravatar' );
 
 function newgravatar ($avatar_defaults) {
 $myavatar = get_bloginfo('template_directory') . '/images/gravatar.gif';
-$avatar_defaults[$myavatar] = "MozillaVE";
+$avatar_defaults[$myavatar] = "Put Your Gravatar Name Here";
 return $avatar_defaults;
 }
 
@@ -177,4 +177,10 @@ function disable_self_ping( &$links ) {
             unset($links[$l]);
 }
 add_action( 'pre_ping', 'disable_self_ping' );
+
+function disableAutoSave(){
+    wp_deregister_script('autosave');
+}
+add_action( 'wp_print_scripts', 'disableAutoSave' );
+
 ?>
