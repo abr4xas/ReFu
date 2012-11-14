@@ -31,6 +31,16 @@ function refu_menu()
 
 }
 
+//Style
+
+ add_action("init", "addHeaderCode");
+function addHeaderCode() {
+	wp_register_style("RefuStyle", WP_PLUGIN_URL . '/style.css');
+	wp_enqueue_style("RefuStyle");
+}
+
+
+
 // Custom_Avatar_and_Logo
 function custom_loginlogo() {
 echo '<style type="text/css">
