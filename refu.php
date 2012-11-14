@@ -35,7 +35,7 @@ function refu_menu()
 
  add_action("init", "addHeaderCode");
 function addHeaderCode() {
-	wp_register_style("RefuStyle", WP_PLUGIN_URL . '/style.css');
+	wp_register_style("RefuStyle", WP_PLUGIN_URL . '/refu-regulatory-functions/style.css');
 	wp_enqueue_style("RefuStyle");
 }
 
