@@ -19,7 +19,6 @@ function refu_panel()
 }
 function refu_menu()
 {
-
 	$page_title = "ReFu";
 	$menu_title = $page_title;
 	$access_level = "8";
@@ -28,11 +27,9 @@ function refu_menu()
 	$menu_icon_url = null;
 	add_menu_page($page_title, $menu_title, $access_level, $content_file, $content_function, $menu_icon_url);
 	add_submenu_page($content_file,$page_title, $menu_title, $access_level, $content_file, 'refu_panel');
-
 }
 
 //Style
-
  add_action("init", "addHeaderCode");
 function addHeaderCode() {
 	wp_register_style("RefuStyle", WP_PLUGIN_URL . '/refu-regulatory-functions/style.css');

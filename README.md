@@ -27,10 +27,9 @@ Installation
 
 Frequently Asked Questions
 --------------------------
- * It can cause some kind of problem in my blog?
 
-It has been tested and has not caused problems. To avoid any inconvenience disable any other plugin to do what is listed in the changelog as it can cause some kind of system error.
+  * Can it cause some kind of problem in my blog?
+It has been tested and it hasn't caused any problems. To avoid any inconvenience disable any other plugin that do stuff listed in the changelog, because it might as cause some kind of system error.
 
- * To find some bug where I can report it?
-
+  * Where can i report bugs?
 To report bugs: clic [here]( https://github.com/abr4xas/ReFu/issues).
