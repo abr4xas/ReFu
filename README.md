@@ -11,10 +11,7 @@ ReFU (Regulatory functions)
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Alternative functions.php file of wordpress themes.
-
-Note
-----
-See [download](https://github.com/abr4xas/ReFu/downloads)  secction for stable release. 
+ 
 
 Description
 -----------
