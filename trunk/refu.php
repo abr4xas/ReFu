@@ -2,7 +2,7 @@
 /*
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes.
-Contributors: abr4xas
+Author: abr4xas
 Donate link: http://abr4xas.org/refu
 Tags: functions
 Version: 3.0
