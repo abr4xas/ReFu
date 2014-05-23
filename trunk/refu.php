@@ -2,62 +2,26 @@
 /*
 Plugin Name: Functions
 Description: Alternative <code>functions.php</code>  file of wordpress themes.
-Contributors: abr4xas
+Author: abr4xas
 Donate link: http://abr4xas.org/refu
 Tags: functions
-Requires at least: 3.4
-Tested up to: 3.4.1
-Stable tag: 2.0.1
+Version: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-add_action('admin_menu', 'refu_menu');
-function refu_panel()
-{
-  include('settings.php');
-}
-function refu_menu()
-{
-	$page_title = "ReFu";
-	$menu_title = $page_title;
-	$access_level = "8";
-	$content_file = '/settings.php';
-	$content_function = null;
-	$menu_icon_url = null;
-	add_menu_page($page_title, $menu_title, $access_level, $content_file, $content_function, $menu_icon_url);
-	add_submenu_page($content_file,$page_title, $menu_title, $access_level, $content_file, 'refu_panel');
-}
 
-//Style
- add_action("init", "addHeaderCode");
-function addHeaderCode() {
-	wp_register_style("RefuStyle", WP_PLUGIN_URL . '/refu-regulatory-functions/style.css');
-	wp_enqueue_style("RefuStyle");
-}
+// custom var
 
+$url_feed = 'Put your feed url here';
 
-
-// Custom_Avatar_and_Logo
-function custom_loginlogo() {
-echo '<style type="text/css">
-h1 a {background-image: url('.get_bloginfo('template_directory').'/images/login_logo.png) !important; }
-</style>';
-}
-add_action('login_head', 'custom_loginlogo');
-
-add_filter( 'avatar_defaults', 'newgravatar' );
-
-function newgravatar ($avatar_defaults) {
-$myavatar = get_bloginfo('template_directory') . '/images/gravatar.gif';
-$avatar_defaults[$myavatar] = "Put Your Gravatar Name Here";
-return $avatar_defaults;
-}
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
 // Custom feed link
 function custom_feed_link($output, $feed) {
 
-$feed_url = 'Put your feed url here';
+$feed_url = $url_feed;
 
 $feed_array = array('rss' => $feed_url, 'rss2' => $feed_url, 'atom' => $feed_url, 'rdf' => $feed_url, 'comments_rss2' => '');
 $feed_array[$feed] = $feed_url;
@@ -68,7 +32,7 @@ return $output;
 
 function other_feed_links($link) {
 
-$link = 'Put your feed url here';
+$link = $url_feed;
 return $link;
 
 }
@@ -85,31 +49,17 @@ wp_oembed_add_provider( 'http://www.slideshare.net/*', 'http://api.embed.ly/v1/a
 }
 add_action('init','oembed_slideshare');
 
-// Custom_LoginLogo
-add_action("login_head", "my_login_head");
-function my_login_head() {
-	echo "
-	<style>
-	body.login #login h1 a {
-		background: url('".get_bloginfo('template_url')."/images/awloginlogo.png') no-repeat scroll center top transparent;
-		height: 135px;
-		width: 135px;
-	}
-	</style>
-	";
-}
-
 // Custom_URL_LoginLogo
 add_action( 'login_headerurl', 'my_custom_login_url' );
 function my_custom_login_url() {
-return 'put your URL here';
+return site_url();
 }
 
 // Custom_ALT_text_LoginLogo
 add_action("login_headertitle","my_custom_login_title");
 function my_custom_login_title()
 {
-return 'Change this';
+return get_bloginfo ( 'description' );
 }
 
 // Custom_social_fields
@@ -133,13 +83,11 @@ add_filter('user_contactmethods','add_redessociales_contactmethod',10,1);
 	 $mimes = array_merge ( $mimes , array (
 		 'pages|numbers|key' => 'application/octet-stream'
 	 ) ) ;
-
 	 return $mimes ;
  }
-
 // Custom_foter_text_admin_panel
 function remove_footer_admin () {
-    echo "Change this";
+    echo get_bloginfo ( 'description' );
 }
 
 add_filter('admin_footer_text', 'remove_footer_admin');
@@ -159,7 +107,6 @@ function twitter_oembed($a) {
 	$a['#http(s)?://(www\.)?twitter.com/.+?/status(es)?/.*#i'] = array( 'http://api.twitter.com/1/statuses/oembed.{format}', true);
 	return $a;
 }
-
 //Send the result when only one is in a search
 function single_result() {
   if(is_search()) {
@@ -190,4 +137,21 @@ function disableAutoSave(){
 }
 add_action( 'wp_print_scripts', 'disableAutoSave' );
 
+// Opengraph for posts
+function opg_post() {
+    if ( is_singular() ) {
+        global $post;
+        setup_postdata( $post );
+        $output = '<meta property="og:type" content="article" />' . "\n";
+        $output .= '<meta property="og:title" content="' . esc_attr( get_the_title() ) . '" />' . "\n";
+        $output .= '<meta property="og:url" content="' . get_permalink() . '" />' . "\n";
+        $output .= '<meta property="og:description" content="' . esc_attr( get_the_excerpt() ) . '" />' . "\n";
+        if ( has_post_thumbnail() ) {
+            $imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+            $output .= '<meta property="og:image" content="' . $imgsrc[0] . '" />' . "\n";
+        }
+        echo $output;
+    }
+}
+add_action( 'wp_head', 'opg_post' );
 ?>
