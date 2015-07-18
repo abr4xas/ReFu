@@ -1,30 +1,69 @@
-Changelog
-
-1.0 
-- This is the inaugural release of ReFu.
-
-2.0
-* added Custom_URL_LoginLogo
-* added Custom_ALT_text_LoginLogo
-* added Custom_social_fields
-* added new uploads files types
-* added Custom_foter_text_admin_panel
-* added Canonical_Permalinks
-* added support_Twitter_oEmbed
-* added Color according to different input state
-- Remove support to Github
-* added Paypal support
-* added Disable self trackbacks
-
-2.0.1
-+ added .pdf support to the WordPress media manager
-- remove support tu jquery (WordPress includes its own version of jquery, which has been rigorously tested with WP and many of 
-the most common plugins. In order to provide the best compatibility and experience for our users.)
-- Removed support to pdf.
-
-3.0
-+ Admin panel.
-+ Se agrega funcion para incluir a ReFu como un menu en el dashboard
-- Se elimina estilos de acuerdo a los diferentes estatus de los post
-- Se elimina soporte a paypal.
-+ Se agrega soporte para eliminar los auto-guardados.
+*   ángel 56c5f87 Merge pull request #1 from spinner-dev/master
+|\  
+| * ángel db0b422 Delete README.md
+| * ángel 6c8ef22 Rename README to README.md
+| * abr4xas 304f98b Update
+| * abr4xas dddab71 deleted
+| * abr4xas 85bec68 Update
+|/  
+* abr4xas 6442c0a update file
+* abr4xas f67d3a1 update files
+* abr4xas 9eb211d Se actualiza core
+* abr4xas 087012e Se actualiza core
+* abr4xas 4a525df Se actualiza estilos.
+* abr4xas 122fb73 Se actualiza html
+* abr4xas 0c119ed Se actualiza core
+* abr4xas 8c5ba81 Se actualiza core
+* abr4xas fbc97da CHANGELOG
+* abr4xas 4998511 Se agrega soporte para eliminar los auto guardados.
+* abr4xas f9087e2 Se actualiza core.
+* abr4xas 1498d0e Se agrega style.css
+* abr4xas 08962c5 README
+* abr4xas 2268e56 README
+* abr4xas a56ef93 Se actualiza README
+* abr4xas 5db6742 CHANGELOG
+* abr4xas 5c3a609 Se actualiza core a 3.0
+* abr4xas d8ae19c Deleted.
+* abr4xas a19fa36 En desarrollo.
+* abr4xas 0f418d2 Se actualiza README
+* abr4xas c682ab8 Se actualiza core
+* abr4xas cd83dfd Se actualiza core.
+* abr4xas 69ab63e Se actualiza README
+* abr4xas 0cc0d7a Se actualiza README
+* abr4xas 447c218 LICENSE Se agrega archivo de Licencia.
+* abr4xas 4c45e6f Codigo ejemplo. Se agrega codigo de ejemplo al archivo.
+* abr4xas dafa230 README Se indica que se esta trabajando en la version 3.0 y se especifica que se trabaja en un panel de configuracion.
+* abr4xas 30ce34f Settings Se agrega archivo de configuracion. Trabajo para la version 3.0 del plug-in
+* abr4xas 1494a7b Se actualiza codigo Se actualiza changelog. Se elimina soporte a .pdf
+* abr4xas 568cf86 Editada descripcion Se agrega mayor informacion a la descripcion del plug-in.
+* abr4xas 17ea520 Se actualiza README Se agrega las FAQ, direccion de descarga, se indica que se elimino el soporte jquery y se agrega soporte pdf.
+* abr4xas dd4fca6 Se actualiza descripcion Se actualiza descripcion, se deja solo version en ingles. En la web del plug-in estaran los apartados ingles y español.
+* abr4xas a080ee2 Se elimina indicacion "beta" Se elimina tag que indicaba que es una version beta. Se indica que es la version 2.0.1
+*   abr4xas 2538a11 Merge branch 'master' into desarrollo Se actualiza informacion del codigo de desarrollo con el estable.
+|\  
+| * abr4xas 8f0bb43 Se actualiza README Se agrega informacion sobre el uso de este plug-in y se indica que quizas puede ocurrir algun error si existe algun otro plug-in que haga lo que se describe aqui.
+| * abr4xas 6325072 Se actualiza codigo Se agrega soporte para .pdf y se valida funcionalidad del codigo y el mismo esta 100% funcional.
+* | abr4xas aa226f8 Se elimina soporte jquery WordPress includes its own version of jquery, which has been rigorously tested with WP and many of the most common plugins. In order to provide the best compatibility and experience for our users, we ask that you not package your own (especially not an older version). No me habia percatado de que wordpress como tal incluye una version de jquery mas actualizada. Esa informacion me la otorgaron al momento de subir el plug-in al codex de wordpress. En el changelog estara mas info.
+|/  
+* abr4xas 341e41a Se actualiza README Se modifica informacion en cuanto a la version de desarrollo y la estable.
+* abr4xas f133eaa Se actualiza changelog
+* abr4xas 1c08b6f Se agrega soporte para subir pdf
+* abr4xas 6b1247c Se indica que la versión 2.0.1 esta en desarrollo
+* abr4xas c91b91a Se agrega info sobre opción de descarga de versión estable
+* abr4xas 9bd21c7 Se actualiza descripción.
+* abr4xas 4bced3e Se actualiza descripción.
+* abr4xas 3ae5039 Se actualiza info en el change log
+* abr4xas bd908c6 Se agrega: Disable self trackbacks
+* abr4xas 7fc34aa Se agrega soporte a paypal
+* abr4xas 706e41c Se actualiza descripcion para Custom_Avatar_and_Logo
+* abr4xas 38a93f5 Se actualiza info en el changelog
+* abr4xas 2fc0307 Se agregan nuevas funciones
+* abr4xas d76bbdb Se actualiza info en el changelog
+* abr4xas 0868e4e Se cambian los tag
+* abr4xas 3e55941 Cambios varios
+* abr4xas d535bfc Se actualiza changelog
+* abr4xas b9d8170 Se elimina soporte a github
+* abr4xas 8b1e5f1 Actualizada información de configuración.
+* abr4xas 69c9f0d Readme file
+* abr4xas 173f20d ReFu file
+* abr4xas 35b1e15 first commit

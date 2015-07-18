@@ -1,5 +1,5 @@
 === ReFU (Regulatory functions) ===
-Contributors: abr4xas
+Contributors: abr4xas, jaac
 Donate link: http://abr4xas.org/refu
 Tags: functions
 Requires at least: 3.4
@@ -34,11 +34,11 @@ To report bugs: https://github.com/abr4xas/ReFu/issues
 
 = 3.0 =
  * Some fixes :)
-
-= 2.0.1 =
+ 
+= 2.0.1 = 
 * added .pdf support to the WordPress media manager
 - remove support tu jquery (WordPress includes its own version of jquery, which has been rigorously tested with WP and many of the most common plugins. In order to provide the best compatibility and experience for our users.)
-- Remove pdf support.
+- Remove pdf support. 
 
 = 2.0 =
 * added Custom_URL_LoginLogo
